@@ -2,6 +2,7 @@ package com.example.dipto.fragmentcommunication;
 
 import android.os.Bundle;
 import android.support.v4.app.FragmentTransaction;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.FrameLayout;
@@ -33,12 +34,15 @@ public class MainActivity extends AppCompatActivity implements RadiogroupFragmen
     public void dataPassingToActivity(String color) {
         if(color.equals("WHITE")){
             Log.d("++++MSG++++", "GOT IT 1!!") ;
+            mainLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.white));
         }
         else if(color.equals("RED")){
             Log.d("++++MSG++++", "GOT IT 2!!") ;
+            mainLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.red));
         }
         else if(color.equals("YELLOW")){
             Log.d("++++MSG++++", "GOT IT 3!!") ;
+            mainLayout.setBackgroundColor(ContextCompat.getColor(this, R.color.yellow));
         }
     }
 }
